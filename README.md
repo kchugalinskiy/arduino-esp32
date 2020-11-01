@@ -3,6 +3,10 @@
 
 ### Need help or have a question? Join the chat at [![https://gitter.im/espressif/arduino-esp32](https://badges.gitter.im/espressif/arduino-esp32.svg)](https://gitter.im/espressif/arduino-esp32?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## Disclaimer
+
+Fork is for my purpose only. I've cut most features that I didn't need and fixed compilation against idf 4+ for those which I needed. Use with care
+
 ## Contents
 - [Development Status](#development-status)
 - [Installation Instructions](#installation-instructions)
