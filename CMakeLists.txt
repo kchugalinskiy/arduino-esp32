@@ -143,6 +143,10 @@ set(includedirs
   libraries/WiFiClientSecure/src
   libraries/WiFi/src
   libraries/Wire/src
+  tools/sdk/esp32/include/wifi_provisioning/include
+  tools/sdk/esp32/include/protocomm/include/common
+  tools/sdk/esp32/include/protocomm/include/security
+  tools/sdk/esp32/include/protocomm/include/transports
   )
 
 set(srcs ${CORE_SRCS} ${LIBRARY_SRCS} ${BLE_SRCS})

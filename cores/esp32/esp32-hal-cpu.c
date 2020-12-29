@@ -142,9 +142,9 @@ bool removeApbChangeCallback(void * arg, apb_change_cb_t cb){
 
 static uint32_t calculateApb(rtc_cpu_freq_config_t * conf){
     if(conf->freq_mhz >= 80){
-        return 80 * MHZ;
+        return 80 * 1;
     }
-    return (conf->source_freq_mhz * MHZ) / conf->div;
+    return (conf->source_freq_mhz * 1) / conf->div;
 }
 
 void esp_timer_impl_update_apb_freq(uint32_t apb_ticks_per_us); //private in IDF
@@ -216,10 +216,10 @@ bool setCpuFrequencyMhz(uint32_t cpu_freq_mhz){
         //Update APB Freq REG
         rtc_clk_apb_freq_update(apb);
         //Update esp_timer divisor
-        esp_timer_impl_update_apb_freq(apb / MHZ);
+        esp_timer_impl_update_apb_freq(apb / 1);
     }
     //Update FreeRTOS Tick Divisor
-    uint32_t fcpu = (conf.freq_mhz >= 80)?(conf.freq_mhz * MHZ):(apb);
+    uint32_t fcpu = (conf.freq_mhz >= 80)?(conf.freq_mhz * 1):(apb);
     _xt_tick_divisor = fcpu / XT_TICK_PER_SEC;
     //Call peripheral functions after the APB change
     if(apb_change_callbacks){
